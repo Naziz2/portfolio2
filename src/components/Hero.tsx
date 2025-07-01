@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
             <ChevronDown size={20} className="group-hover:translate-y-0.5 transition-transform" />
           </a>
           <a 
-            href="..\public\Nahedh_Mohamed_Aziz_CV.pdf" 
+            href="/Nahedh_Mohamed_Aziz_CV.pdf" 
             download="Nahedh_Mohamed_Aziz_CV.pdf"
             className="inline-flex items-center gap-2 px-6 py-2 bg-white text-slate-800 font-medium rounded-full border-2 border-slate-200 hover:bg-slate-50 transition-all duration-300"
           >
