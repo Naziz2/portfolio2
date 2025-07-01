@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail, MapPin, Phone, Globe, ChevronDown } from 'lucide-react';
 import profileImage from '../resource/profile.jpg';
+import CursorFollower from './CursorFollower';
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -11,7 +12,8 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden cursor-none">
+      <CursorFollower />
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
