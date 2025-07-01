@@ -5,6 +5,18 @@ const CursorFollower = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Add global styles to ensure cursor stays consistent
+    const style = document.createElement('style');
+    style.textContent = `
+      * {
+        cursor: none !important;
+      }
+      a, button, [role="button"], input, textarea, select, [tabindex] {
+        cursor: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       if (!isVisible) setIsVisible(true);
@@ -20,6 +32,7 @@ const CursorFollower = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       document.body.removeEventListener('mouseleave', handleMouseLeave);
+      document.head.removeChild(style);
     };
   }, [isVisible]);
 
@@ -30,7 +43,9 @@ const CursorFollower = () => {
         left: `${position.x}px`,
         top: `${position.y}px`,
         transition: 'transform 0.1s ease-out',
-        zIndex: 9999
+        zIndex: 9999,
+        pointerEvents: 'none',
+        willChange: 'transform'
       }}
     />
   );
