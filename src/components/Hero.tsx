@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
         {/* Social Links */}
         <div className="flex justify-center gap-4 mb-12">
           <a
-            href="mailto:mohamedaziznahedh@gmail.com?subject=Contact%20from%20Portfolio&body=Bonjour%20Mohamed%2C%0D%0A%0D%0A"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mohamedaziznahedh@gmail.com&su=Contact%20from%20Portfolio&body=Bonjour%20Mohamed%2C%0D%0A%0D%0A"
             className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
           >
             <Mail size={24} className="text-slate-600 group-hover:text-blue-600 transition-colors" />
